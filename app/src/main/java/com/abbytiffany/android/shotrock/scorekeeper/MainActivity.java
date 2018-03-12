@@ -1,4 +1,4 @@
-package com.example.android.scorekeeper;
+package com.abbytiffany.android.shotrock.scorekeeper;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -6,10 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.CoordinatorLayout;
-
-
-import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -97,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         overallView.setText(overallScoreA + " : " + overallScoreB);
     }
 
+    //sets the color of the reset button
     public void displayResetButton() {
         TextView gameResetView = findViewById(R.id.new_game_button);
         if (ends <= 10) {
@@ -108,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //create a snackbar
     public void resetButton(View v) {
-        //create a snackbar
         final Snackbar reset = Snackbar
                 .make(findViewById(R.id.myCoordinatorLayout), "Game In Progress. End It?", Snackbar.LENGTH_LONG)
                 .setAction("RESET GAME", new View.OnClickListener() {
@@ -129,11 +126,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //create an alert to allow user to input team name
+
+
     //reset entire page
     public void resetAll() {
             displayScoreA(scoreA = 0);
             displayScoreB(scoreB = 0);
-            displayEnds(ends = 0);
+            displayEnds(ends = 1);
             overallScoreA = 0;
             overallScoreB = 0;
             displayOverallScore();

@@ -1,4 +1,4 @@
-package com.example.android.scorekeeper;
+package com.abbytiffany.android.shotrock.scorekeeper;
 
 import org.junit.Test;
 
