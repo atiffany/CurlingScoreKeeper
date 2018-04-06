@@ -1,11 +1,14 @@
 package com.abbytiffany.android.shotrock.scorekeeper;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //create a snackbar
+    //create a snack bar
     public void resetButton(View v) {
         final Snackbar reset = Snackbar
                 .make(findViewById(R.id.myCoordinatorLayout), "Game In Progress. End It?", Snackbar.LENGTH_LONG)
@@ -126,8 +129,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //create an alert to allow user to input team name
-
 
     //reset entire page
     public void resetAll() {
@@ -139,4 +140,13 @@ public class MainActivity extends AppCompatActivity {
             displayOverallScore();
             displayResetButton();
     }
+
+    public void ChangeName(View v) {
+        findViewById(R.id.team_a_name).setOnClickListener(new View.OnClickListener() {
+            public void OnClick(View v) { findViewById(R.id.team_a_name).setText("Team Butt"); }
+        });
+    }
 }
+
+
+

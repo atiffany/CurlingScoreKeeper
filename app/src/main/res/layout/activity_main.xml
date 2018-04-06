@@ -6,8 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/curling"
     tools:context="com.abbytiffany.android.shotrock.scorekeeper.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/curling"/>
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -45,6 +50,9 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/team_a_name"
+                    android:onClick="ChangeName"
+                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -88,6 +96,9 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/team_b_name"
+                    android:onClick="ChangeName"
+                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -128,7 +139,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="8dp"
             android:textSize="14sp"
-            android:text="Current End (Innings)"/>
+            android:text="Current End (Out of Ten)"/>
         <TextView
             android:id="@+id/ends_number"
             android:layout_width="wrap_content"
